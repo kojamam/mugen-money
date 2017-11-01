@@ -1,5 +1,5 @@
-var ConvertLib = artifacts.require("./MugenMoney.sol");
+var MugenMoney = artifacts.require("./MugenMoney.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
+  deployer.deploy(MugenMoney);
 };
