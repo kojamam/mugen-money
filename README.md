@@ -11,5 +11,5 @@ getMoneyメソッドにトランザクションを送るだけで即時発行！
 
 所有者は`_to`に、発行量は`_amount`に設定してください。
 ```
-function getMoney(getMoney(address _to, uint256 _amount);
+function getMoney(address _to, uint256 _amount);
 ```
