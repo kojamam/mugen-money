@@ -1,0 +1,18 @@
+{
+  "name": "mugen-money",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "author": "Koji Yamamoto",
+  "license": "MIT",
+  "dependencies": {
+    "truffle": "^4.0.0",
+    "zeppelin-solidity": "^1.3.0"
+  }
+}
