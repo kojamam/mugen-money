@@ -10,8 +10,8 @@ These contracts are already deployed to Rinkeby testnet [0xab01e34b9F879c1c7F989
 
 Send transaction to getMoney() to issue your own token.
 
-- `_to`: token holder address
+- `_receiver`: token holder address
 - `_amount`: token amount to issue
 ```
-function getMoney(address _to, uint256 _amount);
+function getMoney(address _receiver, uint256 _amount);
 ```
