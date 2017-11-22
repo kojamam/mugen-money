@@ -1,7 +1,6 @@
 pragma solidity ^0.4.18;
 
-import 'zeppelin-solidity/contracts/token/StandardToken.sol';
-
+import '../node_modules/zeppelin-solidity/contracts/token/StandardToken.sol';
 
 contract MugenMoney is StandardToken {
 
