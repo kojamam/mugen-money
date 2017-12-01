@@ -5,13 +5,13 @@ import '../node_modules/zeppelin-solidity/contracts/token/StandardToken.sol';
 contract MugenMoney is StandardToken {
 
     // token information
-    string constant NAME = "Mugen Money";
-    string constant SYMBOL = "MGM";
-    uint32 constant DECIMALS = 18;
+    string public constant NAME = "Mugen Money";
+    string public constant SYMBOL = "MGM";
+    uint32 public constant DECIMALS = 18;
 
-    event Mint(address indexed _receiver, uint256 _amount);
+    event Mint(address indexed _receiver, uint _amount);
 
-    function getMoney(address _receiver, uint256 _amount) public returns (uint newBalance) {
+    function getMoney(address _receiver, uint _amount) public returns (uint newBalance) {
         require(_amount > 0);
         if (_receiver == 0x0) {
             _receiver = msg.sender;
@@ -22,7 +22,14 @@ contract MugenMoney is StandardToken {
 
         assert(balances[_receiver] > 0);
         Mint(_receiver, _amount);
-        return balances[_receiver];
+        return balanceOf(_receiver);
     }
+
+    function burnMyToken() public returns (bool success) {
+        uint balance = balanceOf(msg.sender);
+        balances[msg.sender] = 0;
+        totalSupply = totalSupply.sub(balance);
+        return true;
+    } 
 
 }
