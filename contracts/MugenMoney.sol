@@ -25,6 +25,7 @@ contract MugenMoney is StandardToken {
         return balanceOf(_receiver);
     }
 
+    // burn sender's all tokens
     function burnMyToken() public returns (bool success) {
         uint balance = balanceOf(msg.sender);
         balances[msg.sender] = 0;
