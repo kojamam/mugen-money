@@ -26,11 +26,10 @@ contract MugenMoney is StandardToken {
     }
 
     // burn sender's all tokens
-    function burnMyToken() public returns (bool success) {
+    function burnMoney() public returns (bool success) {
         uint balance = balanceOf(msg.sender);
         balances[msg.sender] = 0;
         totalSupply = totalSupply.sub(balance);
         return true;
-    } 
-
+    }
 }
