@@ -1,6 +1,6 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
-import '../node_modules/zeppelin-solidity/contracts/token/StandardToken.sol';
+import '../node_modules/zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 
 contract MugenMoney is StandardToken {
 
@@ -16,7 +16,7 @@ contract MugenMoney is StandardToken {
         if (_receiver == 0x0) {
             _receiver = msg.sender;
         }
-        
+
         totalSupply = totalSupply.add(_amount);
         balances[_receiver] = balances[_receiver].add(_amount);
 
